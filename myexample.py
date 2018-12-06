@@ -94,3 +94,48 @@ d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 print( d['k1'][0]['nest_key'][1][0] )
 print(1 < 2 and 2 < 3)
 # python uses the actual words for logic and, or, not
+name = 'Jose'
+
+if name == 'Frankie':
+	print('Hello Frankie')
+elif name == 'Sammy':
+	print ('Hello Sammy')
+elif name == 'Jose':
+	print ('Hello Jose')
+else:
+	print('Please enter you name')
+differentlist = [1,2,3,4,5,6,7,8,9,10]
+for numb in differentlist:
+	print('Hello')
+
+for number in differentlist:
+	if number % 2 == 0:
+		print('even')
+	else:
+		print(f'odd')
+# Creating the variable
+sumoflist = 0
+
+for num in differentlist:
+	sumoflist = num + sumoflist
+	print(sumoflist)
+print(sumoflist)
+hellostring = ' Hello World'
+
+for letter in hellostring:
+	print(letter)
+for letter in ' Hello World':
+	print(letter)
+for _ in 'Hello World':
+	print('Using the underscore in a for loop')
+# tuple unpacking 
+tup = [(1,2,3),(3,4,5),(5,6,7),(7,8,9),(9,10,11)]
+for a,b,c in tup:
+	print(c)
+dictionary = {'key1':'random','key2':'value','key3':'sets'}
+for key,value in dictionary.items():
+	print(value)
+x = 0 
+while x < 5:
+	print(f'The value of x = {x}')
+	x += 1
