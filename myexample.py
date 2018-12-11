@@ -139,3 +139,45 @@ x = 0
 while x < 5:
 	print(f'The value of x = {x}')
 	x += 1
+else:
+	print('X is not less than 5')
+# break: Breaks out of the current closet enclosing loop.
+# continue: Goes to the top of the closest enclosing loop. 
+# pass: Does nothing at all
+# Usefull operations 
+# for num in range(start,stop,range)
+for num in range(3,10,2):
+	print(num)
+# To get the list of numbers you type
+print(list(range(3,10,2)))
+# Enumarate function 
+word = 'abcdefghijklmnop'
+for index, letter in enumerate(word):
+	print(letter)
+	print(index)
+# zip function
+mylist = [1,2,3,4,5]
+mylist2 = ['a','b','c','d','e'] 
+for item in zip(mylist,mylist2):
+	print(item)
+from random import shuffle
+numberlist = [1,2,4,5,6,7]
+shuffle(numberlist)
+print(numberlist)
+from random import randint
+print(randint(0,100))
+# input function 
+result = input('What is you name:')
+print(result)
+# First method to append to a list
+# Declare the empty list
+new_list = []
+for x in 'mystring':
+	new_list.append(x)
+print(new_list)
+mystring = 'whatever'
+new_list = [x for x in mystring]
+print(new_list)
+numberlist = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,18,19
+evenlist = [x for x in numberlist if x%2==0]
+print(evenlist)
