@@ -260,3 +260,36 @@ def mydictonaryfunc(**kwargs):
 		print('there is nada here')
 mydictonaryfunc(greeting = 'Fuck you',salutations = 'hola')
 mydictonaryfunc(what = 'Do I exist')
+from fractions import Fraction
+import math
+# Write a function that computes the volume of a sphere given its radius.
+#  If you want to calculate the volume of a sphere, you just have to find its radius and plug it into a simple formula, V = ⁴⁄₃πr³.
+fourthird = Fraction(4,3)
+ 
+def vol(rad):
+	return fourthird * math.pi * rad**3 
+print(vol(2))
+# Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+def up_low(thestring):
+	lowercount = 0
+	uppercount = 0
+	for x in thestring.split():
+		if x[0] == x[0].lower():
+			lowercount += 1
+			print('Lower')
+			print(lowercount)
+		else:
+			uppercount += 1
+			print('upper')
+			print(uppercount )
+s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
+up_low(s)
+# Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+lst = [1,1,1,1,2,2,3,3,3,3,4,5]
+
+def unique_list(*arg):
+	for x in arg:
+		newthing = x
+		if x == newthing:
+			
