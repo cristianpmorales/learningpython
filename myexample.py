@@ -124,10 +124,13 @@ hellostring = ' Hello World'
 
 for letter in hellostring:
 	print(letter)
+	print('HELLO THERE')
 for letter in ' Hello World':
 	print(letter)
+	print('HELLO THERE2')
 for _ in 'Hello World':
 	print('Using the underscore in a for loop')
+	print('HELLO THERE3')
 # tuple unpacking 
 tup = [(1,2,3),(3,4,5),(5,6,7),(7,8,9),(9,10,11)]
 for a,b,c in tup:
@@ -148,6 +151,7 @@ else:
 # for num in range(start,stop,range)
 for num in range(3,10,2):
 	print(num)
+	print('for num in range(start,stop,range)')
 # To get the list of numbers you type
 print(list(range(3,10,2)))
 # Enumarate function 
@@ -181,3 +185,78 @@ print(new_list)
 numberlist = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,18,19
 evenlist = [x for x in numberlist if x%2==0]
 print(evenlist)
+# Use for, .split(), and if to create a Statement that will print out words that start with 's':
+st = 'Print only the words that start with s in this sentence'
+for x in st:
+	if x == 's':
+		print(st.split('s'))
+# Correct solution 
+for word in st.split():
+	if word[0] == 's':
+		print(word)
+# Use range() to print all the even numbers from 0 to 10.
+print(range(0,11,2))
+# Use a List Comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.
+listofnumbers = [x for x in range(0,51) if x%3==0]
+print(listofnumbers)
+# Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+for x in range(1,101):
+		if x%3 == 0 and x%5 == 0 :
+			print('FizzBuzz')
+		elif x%5 == 0:
+			print('Buzz')
+		elif x%3 == 0:
+			print('Fizz')
+		else:
+			print(x)
+# Go through the string below and if the length of a word is even print "even!"
+st = 'Print every word in this sentence that has an even number of letters'
+# Correct solution
+for word in st.split():
+	if len(word) % 2 == 0:
+		print(word)
+# Use List Comprehension to create a list of the first letters of every word in the string below:
+st = 'Create a list of the first letters of every word in this string'
+newword = [word[0] for word in st.split()]
+print(newword)
+help(newword.insert)
+def name_function():
+	'''
+	Docstring: Description of function
+	Input: Shit is entered 
+	Output: Shit happens
+	'''
+	print('Hello')
+help(name_function)
+name_function()
+def pig_latin(word):
+	first_letter = word[0]
+
+	# Check if vowel
+	if first_letter in 'aeiou':
+		pig_word = word + 'ay'
+	else: 
+		pig_word = word[1:] + first_letter + 'ay'
+	return pig_word
+print(pig_latin('idiot'))
+def myfunc(*arg):
+	'''
+	Docstring: Takes a number of arguments and returns a tip
+	Input: None
+	Output: Total
+	'''
+	print(sum(arg) * 1.2)
+	return sum(arg) * 1.2
+myfunc(100,100,100)
+def mydictonaryfunc(**kwargs):
+	'''
+	Docstring: Find keywords in a dictonary
+	input: none
+	Output: hello, goodbye
+	'''
+	if 'greeting' in kwargs:
+		print('The greeting is {}'.format(kwargs['greeting']))
+	else:
+		print('there is nada here')
+mydictonaryfunc(greeting = 'Fuck you',salutations = 'hola')
+mydictonaryfunc(what = 'Do I exist')
